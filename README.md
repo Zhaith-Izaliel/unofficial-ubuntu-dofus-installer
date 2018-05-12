@@ -8,6 +8,8 @@ Voici un installer en Bash que j'ai écrit histoire de rendre l'installation de 
 Tout le code est commenté et, en plus, vous pouvez **changer certains paramètres d'installation.**
 Ces paramètres modifiables sont pourvu d'une balise `##CUSTOMIZABLE *****##`.
 
+Ce projet proviens d'une demande de -Swipy- sur [ce post](https://www.dofus.com/fr/forum/1087-ergonomie-performances/2268044-installer-dofus-ubuntu-17-10-x-64-bits), sur le forum français officiel de Dofus.
+
 ## Installation
 * Ouvrez un terminal.
 * **Placez-vous dans le repertoire où se trouve le script.**
@@ -32,6 +34,8 @@ Zhaith Izaliel
 Here is a Bash installer that I've written to simplify the Dofus installation on **Ubuntu 17.10 - 18.04 LTS**.
 This script is commented, and you can **set customizable installing parameters**.
 These parameters are identified by a `##CUSTOMIZABLE *****##` beacon.
+
+This project is originaly a demand of -Swipy- on [this thread](https://www.dofus.com/fr/forum/1087-ergonomie-performances/2268044-installer-dofus-ubuntu-17-10-x-64-bits), on the official Dofus french forum.
 
 ## Installation:
 * Open a terminal.
