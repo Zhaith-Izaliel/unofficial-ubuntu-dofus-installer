@@ -41,7 +41,7 @@ apt-get install libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libasound2
 
 mv ./extract/Dofus/ /opt/ ##CUSTOMIZABLE DIRECTORY (change /opt/)
 rm -rf extract
-chown -R root:root /opt/Dofus ##CUSTOMIZABLE DIRECTORY (Be constant with your previous choice)
+chown -R $USER:$USER /opt/Dofus ##CUSTOMIZABLE DIRECTORY (Be constant with your previous choice)
 #-------------------------------------------------------#
 #Suppression des archives téléchargées. | Removing downloaded archives.
 
