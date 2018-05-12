@@ -10,6 +10,10 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
+if [ ! -d "$1" ]; then
+    echo "You need to set an existing installation directory."
+    exit
+fi
 #-------------------------------------------------------#
 #Téléchargement des ressources. | Downloading ressources.
 
@@ -39,9 +43,10 @@ apt-get install libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libasound2
 #Déplacement de l'archive Dofus. | Moving Dofus' Archive.
 ##Ici, vous pouvez changer le dossier de destination qui contiendra Dofus. | Here, you can change the destination directory which will contain Dofus.
 
-mv ./extract/Dofus/ /opt/ ##CUSTOMIZABLE DIRECTORY (change /opt/)
+mv ./extract/Dofus/ $1 
 rm -rf extract
-chown -R $USER:$USER /opt/Dofus ##CUSTOMIZABLE DIRECTORY (Be constant with your previous choice)
+chown -R $USER:$USER $1"Dofus"
+
 #-------------------------------------------------------#
 #Suppression des archives téléchargées. | Removing downloaded archives.
 
@@ -53,7 +58,7 @@ rm libpng12-0_1.2.54-1ubuntu1_amd64.deb adobeair_2.6.0.2_amd64.deb
 SCRIPT_DIR=/usr/local/bin/dofus
 
 echo "#!/bin/bash" > $SCRIPT_DIR
-echo "cd /opt/Dofus" >> $SCRIPT_DIR ##CUSTOMIZABLE DIRECTORY (Be constant with your previous choice)
+echo "cd "$1"/Dofus" >> $SCRIPT_DIR
 echo "./Dofus" >> $SCRIPT_DIR
 echo "exit 0;" >> $SCRIPT_DIR
 chmod +x $SCRIPT_DIR
@@ -67,7 +72,7 @@ echo "[Desktop Entry]" > $DESKTOP_APP
 echo "Type=Application" >> $DESKTOP_APP
 echo "Name=Dofus 2.0" >> $DESKTOP_APP
 echo "Exec=dofus" >> $DESKTOP_APP
-echo "Icon=/opt/Dofus/share/updater_data/icons/game_icon_128x128.png" >> $DESKTOP_APP ##CUSTOMIZABLE Icon (Founded in */Dofus/share/updater_data/icons/)
+echo "Icon="$1"Dofus/share/updater_data/icons/game_icon_512x512" >> $DESKTOP_APP
 
 #-------------------------------------------------------#
 #Fin du Programme. | End of Program.
