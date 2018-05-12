@@ -41,7 +41,7 @@ apt-get install libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libasound2
 
 mv ./extract/Dofus/ /opt/ ##CUSTOMIZABLE DIRECTORY (change /opt/)
 rm -rf extract
-
+chown -R root:root /opt/Dofus ##CUSTOMIZABLE DIRECTORY (Be constant with your previous choice)
 #-------------------------------------------------------#
 #Suppression des archives téléchargées. | Removing downloaded archives.
 
@@ -53,7 +53,7 @@ rm libpng12-0_1.2.54-1ubuntu1_amd64.deb adobeair_2.6.0.2_amd64.deb
 SCRIPT_DIR=/usr/local/bin/dofus
 
 echo "#!/bin/bash" > $SCRIPT_DIR
-echo "cd /opt/Dofus" >> $SCRIPT_DIR ##CUSTOMIZABLE Directory (Be constant with your previous choice)
+echo "cd /opt/Dofus" >> $SCRIPT_DIR ##CUSTOMIZABLE DIRECTORY (Be constant with your previous choice)
 echo "./Dofus" >> $SCRIPT_DIR
 echo "exit 0;" >> $SCRIPT_DIR
 chmod +x $SCRIPT_DIR
