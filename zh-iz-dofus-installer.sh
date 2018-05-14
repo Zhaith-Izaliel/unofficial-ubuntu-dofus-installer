@@ -3,10 +3,10 @@
 #This script is under a CC-0 Licence.
 
 #######################################################
-#LANCER LE SCRIPT EN ROOT ! | RUN THIS SCRIPT AS ROOT !
+#LANCER LE SCRIPT EN SUDO ! | RUN THIS SCRIPT AS SUDO !
 #######################################################
 if [ "$EUID" -ne 0 ]; then
-    echo "Please, run as root."
+    echo "Please, run as sudo."
     exit
 fi
 
@@ -27,7 +27,7 @@ wget 'fr.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubun
 mkdir extract
 mv dofus-amd64.tar.gz extract
 cd extract
-tar xvzf dofus-amd64.tar.gz
+tar -xvzf dofus-amd64.tar.gz
 rm dofus-amd64.tar.gz
 cd -
 dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
@@ -45,7 +45,7 @@ apt-get install libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libasound2
 
 mv ./extract/Dofus/ $1 
 rm -rf extract
-chown -R $USER:$USER $1"Dofus"
+chown -R $SUDO_USER:$SUDO_USER $1"Dofus"
 
 #-------------------------------------------------------#
 #Suppression des archives téléchargées. | Removing downloaded archives.
