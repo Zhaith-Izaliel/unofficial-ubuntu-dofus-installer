@@ -13,7 +13,7 @@ Ce projet proviens d'une demande de -Swipy- sur [ce post](https://www.dofus.com/
 * Ouvrez un terminal.
 * **Placez-vous dans le repertoire où se trouve le script.**
 * Tapez `sudo chmod +x zh-iz-dofus-installer.sh`.
-* Tapez ensuite `sudo ./zh-iz-dofus-installeer.sh [Dossier D'Installation]` où `[Dossier D'Installation]` est le chemin **absolu** vers le dossier d'installation du jeu. 
+* Tapez ensuite `sudo ./zh-iz-dofus-installer.sh [Dossier D'Installation]` où `[Dossier D'Installation]` est le chemin **absolu** vers le dossier d'installation du jeu. 
 * Laissez le script fonctionner. L'installation est terminée, le raccourci dans le menu d'application est créé. Vous pouvez cliquer dessus ou taper dans un terminal `dofus` pour jouer.
 * **Amusez-vous bien ! ^^**
 
