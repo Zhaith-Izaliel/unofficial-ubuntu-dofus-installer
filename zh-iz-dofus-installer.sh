@@ -72,7 +72,7 @@ echo "[Desktop Entry]" > $DESKTOP_APP
 echo "Type=Application" >> $DESKTOP_APP
 echo "Name=Dofus 2.0" >> $DESKTOP_APP
 echo "Exec=dofus" >> $DESKTOP_APP
-echo "Icon="$1"Dofus/share/updater_data/icons/game_icon_512x512" >> $DESKTOP_APP
+echo "Icon="$1"Dofus/share/updater_data/icons/game_icon_512x512.png" >> $DESKTOP_APP
 
 #-------------------------------------------------------#
 #Fin du Programme. | End of Program.
