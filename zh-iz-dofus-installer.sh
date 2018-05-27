@@ -17,8 +17,8 @@ fi
 #-------------------------------------------------------#
 #Téléchargement des ressources. | Downloading ressources.
 
+apt-get install adobeair
 wget 'http://dl.ak.ankama.com/games/installers/dofus-amd64.tar.gz'
-wget 'http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_amd64.deb'
 wget 'fr.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb'
 
 #-------------------------------------------------------#
@@ -31,7 +31,6 @@ tar -xvzf dofus-amd64.tar.gz
 rm dofus-amd64.tar.gz
 cd -
 dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
-dpkg -i adobeair_2.6.0.2_amd64.deb
 
 #-------------------------------------------------------#
 #Correction des bugs de dépendances. | Correcting dependancies bugs.
