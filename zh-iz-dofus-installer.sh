@@ -17,7 +17,7 @@ fi
 #-------------------------------------------------------#
 #Téléchargement des ressources. | Downloading ressources.
 
-apt-get install adobeair
+apt-get install -y adobeair
 wget -O dofus.tar.gz 'http://dl.ak.ankama.com/games/installers/dofus-amd64.tar.gz'
 wget -O libpng12.deb 'fr.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb'
 
@@ -36,7 +36,7 @@ dpkg -i libpng12.deb
 #Correction des bugs de dépendances. | Correcting dependancies bugs.
 
 apt --fix-broken install
-apt-get install libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libasound2:i386 libasound2-plugins:i386
+apt-get install -y libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libasound2:i386 libasound2-plugins:i386
 
 #-------------------------------------------------------#
 #Déplacement de l'archive Dofus. | Moving Dofus' Archive.
