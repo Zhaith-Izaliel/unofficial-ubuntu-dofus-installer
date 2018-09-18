@@ -18,7 +18,7 @@ Ce projet proviens d'une demande de -Swipy- sur [ce post](https://www.dofus.com/
 * **Amusez-vous bien ! ^^**
 
 ## Droits:
-**Je ne possède en aucun cas Dofus**. Ce logiciel appartien à *Ankama Games**. ***Vous êtes soumis à leurs CGU en utilisant leur logiciel.
+**Je ne possède en aucun cas Dofus**. Ce logiciel appartien à *Ankama Games*. Vous êtes soumis à leurs CGU en utilisant leur logiciel.
 Cependant, **ce script est sous une licence CC-0**.
 
 -------
@@ -45,5 +45,5 @@ This project is originaly a demand of -Swipy- on [this thread](https://www.dofus
 
 ## Rights:
 
-**I do not own Dofus**. This software belongs to *Ankama Games**. You are under their TOS when using this software.
+**I do not own Dofus**. This software belongs to *Ankama Games*. You are under their TOS when using this software.
 However, **this script is under a CC-0 licence**.
