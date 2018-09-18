@@ -17,9 +17,19 @@ fi
 #-------------------------------------------------------#
 #Téléchargement des ressources. | Downloading ressources.
 
-wget -O adobeair.deb 'http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_amd64.deb'
 wget -O dofus.tar.gz 'http://dl.ak.ankama.com/games/installers/dofus-amd64.tar.gz'
 wget -O libpng12.deb 'fr.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb'
+
+#-------------------------------------------------------#
+#Installation de WINE. Depuis la mise à jour 2.48, il remplace Adobe Air. | Installing WINE. Since 2.48 update, it replaces Adobe Air.
+
+dpkg --add-architecture i386  
+wget -nc https://dl.winehq.org/wine-builds/Release.key
+apt-key add Release.key && rm Release.key
+apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+apt-get update
+apt-get -y install --install-recommends winehq-stable
+
 
 #-------------------------------------------------------#
 #Dépaquetage de l'archive Dofus et installation des dépendances. | Unzipping Dofus' archive and installing dependancies.
@@ -31,7 +41,6 @@ tar -xvzf dofus.tar.gz
 rm dofus.tar.gz
 cd -
 dpkg -i libpng12.deb
-dpkg -i adobeair.deb
 
 #-------------------------------------------------------#
 #Correction des bugs de dépendances. | Correcting dependancies bugs.
@@ -51,7 +60,6 @@ chown -R $SUDO_USER:$SUDO_USER $1"Dofus"
 #Suppression des archives téléchargées. | Removing downloaded archives.
 
 rm libpng12.deb
-rm adobeair.deb
 
 #-------------------------------------------------------#
 #Création du script de lancement de Dofus. | Creating Dofus' running script.
