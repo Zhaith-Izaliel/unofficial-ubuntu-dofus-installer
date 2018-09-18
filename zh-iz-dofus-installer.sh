@@ -17,7 +17,7 @@ fi
 #-------------------------------------------------------#
 #Téléchargement des ressources. | Downloading ressources.
 
-apt-get install adobeair
+wget -O adobeair.deb 'http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_amd64.deb'
 wget -O dofus.tar.gz 'http://dl.ak.ankama.com/games/installers/dofus-amd64.tar.gz'
 wget -O libpng12.deb 'fr.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb'
 
@@ -31,6 +31,7 @@ tar -xvzf dofus.tar.gz
 rm dofus.tar.gz
 cd -
 dpkg -i libpng12.deb
+dpkg -i adobeair.deb
 
 #-------------------------------------------------------#
 #Correction des bugs de dépendances. | Correcting dependancies bugs.
@@ -49,7 +50,8 @@ chown -R $SUDO_USER:$SUDO_USER $1"Dofus"
 #-------------------------------------------------------#
 #Suppression des archives téléchargées. | Removing downloaded archives.
 
-rm libpng12.deb 
+rm libpng12.deb
+rm adobeair.deb
 
 #-------------------------------------------------------#
 #Création du script de lancement de Dofus. | Creating Dofus' running script.
