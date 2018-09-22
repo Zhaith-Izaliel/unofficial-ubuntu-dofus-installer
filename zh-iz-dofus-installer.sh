@@ -22,14 +22,19 @@ wget -O libpng12.deb 'fr.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng1
 
 #-------------------------------------------------------#
 #Installation de WINE. Depuis la mise à jour 2.48, il remplace Adobe Air. | Installing WINE. Since 2.48 update, it replaces Adobe Air.
-
-dpkg --add-architecture i386  
-wget -nc https://dl.winehq.org/wine-builds/Release.key
-apt-key add Release.key && rm Release.key
-apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
-apt-get update
-apt-get -y install --install-recommends winehq-stable
-
+export EXISTS_WINE=$(which wine > /dev/null && echo 1) #Checking if WINE is installed on the system. It will return 1 if this is the case, nothing else.
+if [ $EXISTS_WINE -ne 1 ]; then
+    echo "WINE is not installed on this system. Install it ? (y/n)"
+    read
+    if [ "$REPLY" = "y" ]; then
+        dpkg --add-architecture i386  
+        wget -nc https://dl.winehq.org/wine-builds/Release.key
+        apt-key add Release.key && rm Release.key
+        apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+        apt-get update
+        apt-get -y install --install-recommends winehq-stable       
+    fi
+fi
 
 #-------------------------------------------------------#
 #Dépaquetage de l'archive Dofus et installation des dépendances. | Unzipping Dofus' archive and installing dependancies.
