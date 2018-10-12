@@ -13,12 +13,12 @@ Ce projet proviens d'une demande de -Swipy- sur [ce post](https://www.dofus.com/
 * Ouvrez un terminal.
 * **Placez-vous dans le repertoire où se trouve le script.**
 * Tapez `sudo chmod +x zh-iz-dofus-installer.sh`.
-* Tapez ensuite `sudo ./zh-iz-dofus-installer.sh [Dossier D'Installation]` où `[Dossier D'Installation]` est le chemin **absolu** vers le dossier d'installation du jeu. 
+* Tapez ensuite `sudo ./zh-iz-dofus-installer.sh [Dossier D'Installation]` où `[Dossier D'Installation]` est le chemin **absolu** vers le dossier d'installation du jeu.
 * Laissez le script fonctionner. L'installation est terminée, le raccourci dans le menu d'application est créé. Vous pouvez cliquer dessus ou taper dans un terminal `dofus` pour jouer.
 * **Amusez-vous bien ! ^^**
 
 ## Droits:
-**Je ne possède en aucun cas Dofus**. Ce logiciel appartien à *Ankama Games*. Vous êtes soumis à leurs CGU en utilisant leur logiciel.
+**Je ne possède en aucun cas Dofus**. Ce logiciel appartient à *Ankama Games*. Vous êtes soumis à leurs CGU en utilisant leur logiciel.
 Cependant, **ce script est sous une licence CC-0**.
 
 -------
@@ -31,7 +31,7 @@ Zhaith Izaliel
 ## Presentation:
 
 Here is a Bash installer that I've written to simplify the Dofus installation on **Ubuntu 17.10 - 18.04 LTS**.
-This script is commented. 
+This script is commented.
 
 This project is originaly a demand of -Swipy- on [this thread](https://www.dofus.com/fr/forum/1087-ergonomie-performances/2268044-installer-dofus-ubuntu-17-10-x-64-bits), on the official Dofus french forum.
 
