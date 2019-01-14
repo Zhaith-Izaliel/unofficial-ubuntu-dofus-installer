@@ -11,7 +11,8 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 if [ ! -d "$1" ]; then
-    echo "You need to set an existing installation directory."
+    #echo "You need to set an existing installation directory."
+    mkdir -p "$1"
     exit
 fi
 #-------------------------------------------------------#
