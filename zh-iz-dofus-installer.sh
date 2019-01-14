@@ -12,7 +12,7 @@ fi
 
 if [ ! -d "$1" ]; then
     #echo "You need to set an existing installation directory."
-    mkdir "$1"
+    mkdir -p "$1"
     exit
 fi
 #-------------------------------------------------------#
